@@ -17,12 +17,8 @@ def main1():
 	for l in lines:
 		lines_s.append(l.strip()) 
 
-	#r_len = len(lines_s)
 	r_len = 10
-	#r_len = 5
-	#c_len = len(lines_s[0])
 	c_len = 10
-	#c_len = 5
 	m_arr = np.zeros((r_len,c_len), dtype=int)
 	for r in range(r_len):
 		for c in range(c_len):
@@ -82,30 +78,6 @@ def main1():
 	
 	print(m_arr)
 	print(num_flashes)
-		
-	#risk = 0
-	#possib_basins = []
-	#for r in range(r_len):
-#		for c in range(c_len):
-#			v_min = True
-#			n_min = m_arr[r,c]
-#			if r-1 >= 0:
-#				if m_arr[r-1, c] <= n_min:
-#					v_min = False
-#			if r+1 < r_len:
-#				if m_arr[r+1, c] <= n_min:
-#					v_min = False
-#			if c-1 >= 0:
-#				if m_arr[r, c-1] <= n_min:
-#					v_min = False
-#			if c+1 < c_len:
-#				if m_arr[r, c+1] <= n_min:
-#					v_min = False
-#			if v_min:
-#				risk += n_min + 1
-#				possib_basins.append([r,c])
-#
-#	return possib_basins, m_arr, r_len, c_len
 
 if __name__ == '__main__':
 	main1()
